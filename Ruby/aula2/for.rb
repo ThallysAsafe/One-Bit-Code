@@ -1,4 +1,7 @@
-fruits = ['Apple', 'Blueberry', 'Banana']
+fruits = ['Apple', 'Blueberry', 'Banana', 'Tomato']
+count = 1
 for fruit in fruits
-  puts fruit
+  print fruit
+  puts count
+  count += 1
 end
