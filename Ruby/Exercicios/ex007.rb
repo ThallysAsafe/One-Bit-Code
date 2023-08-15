@@ -10,4 +10,4 @@ for x , i in numbers
     chave = x
   end
 end
-puts"Chave=#{chave} e  valor=#{maior}"
+puts"Chave =#{chave} e  valor=#{maior}"
