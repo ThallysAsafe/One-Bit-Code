@@ -19,3 +19,26 @@ def foo
 end
 # Metodo com um parametro block!
 foo { puts "Exec the block"}
+foo do
+  puts "Exec the block"
+  puts 123
+end
+# Outra Maneira
+def foo1
+  if block_given?
+    # Call the Block
+    yield
+  else
+    puts "Sem parâmetro do tipo bloco"
+  end
+end
+
+foo1
+foo1 { puts "Com parâmetro do tipo bloco"}
+# +1
+def foo(name, &block) # para utilizar com um parametro normal(name) com block, é necessário usar &block e block.call, como estar apresentado.
+  @name = name
+  block.call
+end
+
+foo('Leonardo') { puts "Hellow #{@name}"} # Presença de 2 parametros, um normal e outro block
